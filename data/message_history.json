@@ -4,68 +4,80 @@
       "Your brain is ready. {topic} doesn't stand a chance! \ud83e\udde0",
       "New day, new power-up! Your skill '{topic}' awaits. \ud83d\udcbb",
       "Let's turn you into a {topic} wizard today! \u2728",
-      "Fresh topic alert: {topic}! Time to level up! \ud83d\ude80"
+      "Fresh topic alert: {topic}! Time to level up! \ud83d\ude80",
+      "New mission: Master {topic}. Difficulty: Piece of cake! \ud83c\udf70"
     ],
     "playful_review_topic": [
       "Let's give {topic} another shot. You've got this! \ud83d\udd01",
       "Rematch with {topic}! Revenge coding time! \u2694\ufe0f",
       "{topic} part 2: The Return! Let's finish this! \ud83c\udfac",
-      "Round 2 with {topic}! Time to show it who's boss! \ud83e\udd4a"
+      "Round 2 with {topic}! Time to show it who's boss! \ud83e\udd4a",
+      "{topic} deserves another look. Let's nail it this time! \ud83d\udd28"
     ],
     "playful_completion_milestone": [
       "Level complete! You're officially awesome! \ud83c\udfc6",
       "Boom! You crushed it! \ud83c\udf89 Take a moment to celebrate!",
       "That's a wrap! You just leveled up big time! \ud83d\udcc8",
-      "Achievement unlocked: {topic} Master! Time to celebrate! \ud83c\udf8a"
+      "Achievement unlocked: {topic} Master! Time to celebrate! \ud83c\udf8a",
+      "You did it! Coding legend status: achieved! \ud83d\udc51"
     ],
     "motivating_new_topic": [
       "Today's goal: Crush {topic}. You CAN and you WILL! \ud83c\udfaf",
       "{topic} is your mountain. Today, you climb! \ud83c\udfd4\ufe0f",
       "Channel your inner champion. {topic} doesn't stand a chance! \ud83c\udfc6",
-      "You're unstoppable! Show {topic} what you're made of! \ud83d\udcaf"
+      "You're unstoppable! Show {topic} what you're made of! \ud83d\udcaf",
+      "Let's attack {topic} with everything you've got! \ud83d\udd25"
     ],
     "motivating_review_topic": [
       "Strong people revisit! {topic} won't beat you! \ud83d\udcaf",
       "Dedication pays off! Let's perfect {topic} today! \ud83c\udfaf",
       "This is how winners are made! {topic} revision time! \u26a1",
-      "Champions review and improve! {topic} round 2! \ud83d\udcaa"
+      "Champions review and improve! {topic} round 2! \ud83d\udcaa",
+      "Persistence beats resistance! {topic} is yours! \ud83d\udd25"
     ],
     "motivating_completion_milestone": [
       "VICTORY! Your hard work paid off magnificently! \ud83c\udf89",
       "INCREDIBLE! You just proved what dedication looks like! \ud83c\udfc6",
       "Outstanding! This is just the beginning of your greatness! \ud83d\udcaf",
-      "You are UNSTOPPABLE! Celebrate this massive win! \ud83d\udcaa"
+      "You are UNSTOPPABLE! Celebrate this massive win! \ud83d\udcaa",
+      "POWERFUL! You just leveled up your entire future! \ud83d\ude80"
     ],
     "soft_new_topic": [
       "No rush! Let's explore {topic} together at your pace \ud83c\udf19",
       "Hello! Ready to discover {topic}? Go at your own speed \ud83c\udf3b",
       "Take your time with {topic} today. You're doing wonderfully \ud83c\udf38",
-      "Today's journey: {topic}. Be kind to yourself as you learn \ud83d\udcab"
+      "Today's journey: {topic}. Be kind to yourself as you learn \ud83d\udcab",
+      "{topic} awaits you. Remember, every step counts \ud83e\udd8b"
     ],
     "soft_review_topic": [
       "Gentle review of {topic}. You're growing at your own pace \ud83c\udf31",
       "Let's revisit {topic} with fresh eyes. Learning takes time \ud83c\udf19",
-      "Back to {topic}, and that's perfectly fine. Progress isn't linear \ud83d\udc99"
+      "Back to {topic}, and that's perfectly fine. Progress isn't linear \ud83d\udc99",
+      "It's natural to need more time with {topic}. Take what you need \ud83c\udf43"
     ],
     "soft_completion_milestone": [
       "You reached this milestone through persistence and care \ud83e\udd8b",
       "This moment is yours. You earned it through patience \ud83d\udcab",
-      "You did it! So proud of your journey \ud83c\udf1f"
+      "You did it! So proud of your journey \ud83c\udf1f",
+      "What a beautiful achievement. You should feel wonderful \ud83c\udf38"
     ],
     "genz_new_topic": [
       "{topic} era starts now. Let's get this bread \ud83c\udf5e",
       "{topic} hit different today. Let's gooo! \ud83d\udd25",
-      "{topic} just dropped and it's giving main character energy \ud83d\udc85"
+      "{topic} just dropped and it's giving main character energy \ud83d\udc85",
+      "New {topic} content just unlocked. It's giving genius \ud83e\udde0"
     ],
     "genz_review_topic": [
       "Round 2 with {topic} hits different when you understand it \ud83e\udde0",
       "{topic} review? More like glow-up arc \ud83d\udcc8",
-      "Back to {topic} but make it \u2728revenge era\u2728 \ud83d\udc85"
+      "Back to {topic} but make it \u2728revenge era\u2728 \ud83d\udc85",
+      "Returning to {topic} and we're not gatekeeping this time \ud83d\ude24"
     ],
     "genz_completion_milestone": [
       "You ate and left no crumbs. Period. \ud83d\ude24\u2728",
       "The serve!! The talent!! The everything!! \ud83d\udc51",
-      "STOP IT RIGHT NOW you literally just- \ud83d\ude2d\ud83d\udc80\ud83c\udf89"
+      "STOP IT RIGHT NOW you literally just- \ud83d\ude2d\ud83d\udc80\ud83c\udf89",
+      "And THAT'S on learning and periodt! \ud83d\udcaf\ud83d\udd25"
     ]
   }
 }
