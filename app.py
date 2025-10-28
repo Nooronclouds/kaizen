@@ -28,6 +28,7 @@ app.secret_key = secrets.token_hex(16)
 # Initialize services
 scheduler = AdaptiveScheduler()
 notification_service = NotificationService()
+streak_tracker = StreakTracker()
 
 
 # ============================================================================
@@ -160,13 +161,17 @@ def dashboard():
     # Get progress summary
     progress = scheduler.get_progress_summary(username)
 
+    # Get streak information
+    streak_stats = streak_tracker.get_streak_stats(username)
+
     return render_template(
         'dashboard.html',
         user=user_data['profile'],
         current=current,
         message=message,
         context=context,
-        progress=progress
+        progress=progress,
+        streak=streak_stats
     )
 
 
