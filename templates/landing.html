@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+{% block body_class %}landing-page{% endblock %}
+
+{% block content %}
+<div class="landing-hero">
+    <div class="hero-content">
+        <h1 class="hero-title">🌱 Kaizen</h1>
+        <p class="hero-subtitle">Your Adaptive & Playful Learning Companion</p>
+        <p class="hero-description">
+            Learn programming with an AI that adapts to YOU.<br>
+            Choose your personality. Build your skills. Level up daily.
+        </p>
+
+        <div class="hero-cta">
+            <a href="{{ url_for('onboard') }}" class="btn btn-primary btn-lg">Start Learning</a>
+            <a href="{{ url_for('login') }}" class="btn btn-secondary btn-lg">Log In</a>
+        </div>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>ML-Powered Adaptation</h3>
+            <p>Our AI learns from your quiz performance and adapts your schedule in real-time</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎭</div>
+            <h3>4 Unique Personalities</h3>
+            <p>Choose from playful, motivating, soft, or genz - find the voice that inspires you</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Smart Progress Tracking</h3>
+            <p>Visualize your journey, celebrate milestones, and see your growth over time</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Dynamic Scheduling</h3>
+            <p>Skip ahead when you excel, review when needed - never get stuck or bored</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
