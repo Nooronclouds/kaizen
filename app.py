@@ -20,6 +20,7 @@ from scheduler import AdaptiveScheduler
 from notification_service import NotificationService
 from message_engine import detect_context_from_schedule
 from curriculum import get_supported_languages, get_curriculum
+from streak_tracker import StreakTracker
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
