@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <div class="login-card">
+        <h1>Welcome Back! 👋</h1>
+        <p class="subtitle">Continue your learning journey</p>
+
+        <form method="POST" class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required
+                       placeholder="Enter your username">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+        </form>
+
+        <p class="form-footer">
+            New to Kaizen? <a href="{{ url_for('onboard') }}">Create an account</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
