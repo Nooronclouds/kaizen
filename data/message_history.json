@@ -82,58 +82,91 @@
   },
   "demo_playful": {
     "playful_new_topic": [
-      "Time to unlock {topic}! This is gonna be fun! \ud83c\udfae"
+      "Time to unlock {topic}! This is gonna be fun! \ud83c\udfae",
+      "Fresh topic alert: {topic}! Time to level up! \ud83d\ude80"
     ],
     "playful_review_topic": [
-      "Round 2 with {topic}! Time to show it who's boss! \ud83e\udd4a"
+      "Round 2 with {topic}! Time to show it who's boss! \ud83e\udd4a",
+      "Back to {topic} - but this time, you're the expert! \ud83c\udfaf"
     ],
     "playful_completion_milestone": [
-      "Level complete! You're officially awesome! \ud83c\udfc6"
+      "Level complete! You're officially awesome! \ud83c\udfc6",
+      "Mission accomplished! High five! \u270b"
     ],
     "playful_rest_day": [
-      "Taking a break = secret to success. Enjoy! \ud83d\ude34"
+      "Taking a break = secret to success. Enjoy! \ud83d\ude34",
+      "No coding today! Go do something fun! \ud83c\udfa8"
     ]
   },
   "demo_motivating": {
     "motivating_new_topic": [
-      "Channel your inner champion. {topic} doesn't stand a chance! \ud83c\udfc6"
+      "Channel your inner champion. {topic} doesn't stand a chance! \ud83c\udfc6",
+      "{topic} is your mountain. Today, you climb! \ud83c\udfd4\ufe0f"
     ],
     "motivating_review_topic": [
-      "Dedication pays off! Let's perfect {topic} today! \ud83c\udfaf"
+      "Dedication pays off! Let's perfect {topic} today! \ud83c\udfaf",
+      "This is how winners are made! {topic} revision time! \u26a1"
     ],
     "motivating_completion_milestone": [
-      "What an achievement! You earned every bit of this! \u2b50"
+      "What an achievement! You earned every bit of this! \u2b50",
+      "INCREDIBLE! You just proved what dedication looks like! \ud83c\udfc6"
     ],
     "motivating_rest_day": [
-      "Rest is training! Your mind is getting stronger! \ud83d\udcaa"
+      "Rest is training! Your mind is getting stronger! \ud83d\udcaa",
+      "Smart people rest strategically. That's you! \ud83e\udde0"
     ]
   },
   "demo_soft": {
     "soft_new_topic": [
-      "Hello! Ready to discover {topic}? Go at your own speed \ud83c\udf3b"
+      "Hello! Ready to discover {topic}? Go at your own speed \ud83c\udf3b",
+      "A new chapter: {topic}. You're exactly where you need to be \ud83c\udf43"
     ],
     "soft_review_topic": [
-      "It's okay to review! {topic} will make more sense now \ud83c\udf38"
+      "It's okay to review! {topic} will make more sense now \ud83c\udf38",
+      "Gentle review of {topic}. You're growing at your own pace \ud83c\udf31"
     ],
     "soft_completion_milestone": [
-      "You reached this milestone through persistence and care \ud83e\udd8b"
+      "You reached this milestone through persistence and care \ud83e\udd8b",
+      "Completed! Take a moment to appreciate how far you've come \ud83d\udc99"
     ],
     "soft_rest_day": [
-      "Rest day. Your mind and body will thank you \ud83c\udf19"
+      "Rest day. Your mind and body will thank you \ud83c\udf19",
+      "Taking a break is an act of self-care. Enjoy it \ud83c\udf38"
     ]
   },
   "demo_genz": {
     "genz_new_topic": [
-      "New {topic} content just unlocked. It's giving genius \ud83e\udde0"
+      "New {topic} content just unlocked. It's giving genius \ud83e\udde0",
+      "Not me being obsessed with {topic} already \ud83d\udc80"
     ],
     "genz_review_topic": [
-      "{topic} comeback tour. This is the one fr fr \ud83d\udd25"
+      "{topic} comeback tour. This is the one fr fr \ud83d\udd25",
+      "Back to {topic} but make it \u2728revenge era\u2728 \ud83d\udc85"
     ],
     "genz_completion_milestone": [
-      "This is giving winner energy and I'm here for it! \ud83c\udf8a"
+      "This is giving winner energy and I'm here for it! \ud83c\udf8a",
+      "You ate and left no crumbs. Period. \ud83d\ude24\u2728"
     ],
     "genz_rest_day": [
-      "Day off vibes. Touch grass, bestie \ud83c\udf31\u2728"
+      "Day off vibes. Touch grass, bestie \ud83c\udf31\u2728",
+      "POV: You understand that rest = productivity \ud83d\udcaf"
+    ]
+  },
+  "journey_demo": {
+    "playful_new_topic": [
+      "Fresh topic alert: {topic}! Time to level up! \ud83d\ude80",
+      "New day, new power-up! Your skill '{topic}' awaits. \ud83d\udcbb",
+      "Your brain is ready. {topic} doesn't stand a chance! \ud83e\udde0",
+      "Let's turn you into a {topic} wizard today! \u2728"
+    ],
+    "playful_review_topic": [
+      "Round 2 with {topic}! Time to show it who's boss! \ud83e\udd4a"
+    ],
+    "playful_rest_day": [
+      "Rest day! Your brain earned it. Recharge those neurons! \ud83d\udd0b"
+    ],
+    "playful_completion_milestone": [
+      "Level complete! You're officially awesome! \ud83c\udfc6"
     ]
   }
 }
