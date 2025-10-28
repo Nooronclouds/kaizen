@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Settings{% endblock %}
+{% block body_class %}settings-page tone-{{ user.tone_mode }}{% endblock %}
+
+{% block content %}
+<div class="settings-container">
+    <div class="settings-header">
+        <h1>Settings ⚙️</h1>
+        <p>Personalize your learning experience</p>
+    </div>
+
+    <div class="settings-card">
+        <h2>Learning Personality</h2>
+        <p class="setting-description">Choose the voice that motivates you best</p>
+
+        <div class="current-tone">
+            <strong>Current:</strong> {{ user.tone_mode|capitalize }}
+            <div class="sample-message">
+                <p class="sample-label">Sample message:</p>
+                <p class="sample-text">{{ sample_message }}</p>
+            </div>
+        </div>
+
+        <form method="POST" class="settings-form">
+            <div class="tone-grid">
+                {% set tone_info = {
+                    'playful': {'icon': '😏', 'desc': 'Fun, witty, and casual', 'traits': 'Best for creative learners'},
+                    'motivating': {'icon': '💪', 'desc': 'Energetic and pushing', 'traits': 'Best for goal-oriented achievers'},
+                    'soft': {'icon': '🌙', 'desc': 'Gentle and supportive', 'traits': 'Best for mindful learners'},
+                    'genz': {'icon': '💅', 'desc': 'Internet culture vibes', 'traits': 'Best for meme enthusiasts'}
+                } %}
+
+                {% for tone in tone_modes %}
+                    <label class="tone-card {% if tone == user.tone_mode %}active{% endif %}">
+                        <input type="radio" name="tone_mode" value="{{ tone }}"
+                               {% if tone == user.tone_mode %}checked{% endif %}>
+                        <div class="tone-content">
+                            <span class="tone-icon-large">{{ tone_info[tone]['icon'] }}</span>
+                            <h3>{{ tone|capitalize }}</h3>
+                            <p class="tone-description">{{ tone_info[tone]['desc'] }}</p>
+                            <p class="tone-traits">{{ tone_info[tone]['traits'] }}</p>
+                        </div>
+                    </label>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Save Changes</button>
+        </form>
+    </div>
+
+    <div class="settings-info">
+        <h3>Account Information</h3>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="info-label">Username:</span>
+                <span class="info-value">{{ user.username }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Language:</span>
+                <span class="info-value">{{ user.language|capitalize }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Started:</span>
+                <span class="info-value">{{ user.start_date }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

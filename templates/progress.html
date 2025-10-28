@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Progress{% endblock %}
+{% block body_class %}progress-page tone-{{ user.tone_mode }}{% endblock %}
+
+{% block content %}
+<div class="progress-container">
+    <div class="progress-header">
+        <h1>Your Learning Journey 📊</h1>
+        <p class="username">{{ user.username }}'s Progress in {{ user.language|capitalize }}</p>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="summary-cards">
+        <div class="summary-card">
+            <div class="summary-icon">📚</div>
+            <div class="summary-content">
+                <div class="summary-value">{{ summary.unique_topics_covered }} / {{ curriculum_length }}</div>
+                <div class="summary-label">Topics Covered</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ (summary.unique_topics_covered / curriculum_length * 100)|int }}%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">✅</div>
+            <div class="summary-content">
+                <div class="summary-value">{{ summary.completed_quizzes }}</div>
+                <div class="summary-label">Quizzes Completed</div>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">📈</div>
+            <div class="summary-content">
+                <div class="summary-value">{{ (summary.average_score * 100)|int }}%</div>
+                <div class="summary-label">Average Score</div>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">🔄</div>
+            <div class="summary-content">
+                <div class="summary-value">{{ summary.review_days }}</div>
+                <div class="summary-label">Review Sessions</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Learning Timeline -->
+    <div class="timeline-section">
+        <h2>Learning Timeline</h2>
+        <div class="timeline">
+            {% for entry in schedule_timeline %}
+                <div class="timeline-item {% if entry.completed %}completed{% else %}pending{% endif %}">
+                    <div class="timeline-marker">
+                        {% if entry.completed %}
+                            <span class="marker-icon">✓</span>
+                        {% else %}
+                            <span class="marker-icon">•</span>
+                        {% endif %}
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-day">{{ entry.day|replace('_', ' ')|title }}</span>
+                            <span class="timeline-badge {{ entry.type }}">
+                                {% if entry.type == 'new_topic' %}📚 New
+                                {% elif entry.type == 'review_topic' %}🔄 Review
+                                {% else %}{{ entry.type|replace('_', ' ')|title }}
+                                {% endif %}
+                            </span>
+                        </div>
+                        <h4 class="timeline-topic">{{ entry.topic }}</h4>
+                        {% if entry.quiz_score is not none %}
+                            <div class="timeline-score">Score: {{ (entry.quiz_score * 100)|int }}%</div>
+                        {% else %}
+                            <div class="timeline-pending">Pending...</div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
