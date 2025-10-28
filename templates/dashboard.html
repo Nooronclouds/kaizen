@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block body_class %}dashboard-page tone-{{ user.tone_mode }}{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Header -->
+    <div class="dashboard-header">
+        <h1>Hey {{ user.username }}! 👋</h1>
+        <p class="user-info">Learning {{ user.language|capitalize }} • {{ user.tone_mode|capitalize }} Mode</p>
+    </div>
+
+    <!-- Today's Message -->
+    <div class="message-card">
+        <div class="message-icon">
+            {% if context == 'new_topic' %}📚
+            {% elif context == 'review_topic' %}🔄
+            {% elif context == 'completion_milestone' %}🏆
+            {% else %}🌟
+            {% endif %}
+        </div>
+        <div class="message-content">
+            <p class="message-text">{{ message }}</p>
+        </div>
+    </div>
+
+    <!-- Current Topic Card -->
+    {% if current %}
+    <div class="topic-card">
+        <div class="topic-header">
+            <h2>
+                {% if current.type == 'new_topic' %}📚 New Topic
+                {% elif current.type == 'review_topic' %}🔄 Review Session
+                {% elif current.type == 'rest_day' %}😴 Rest Day
+                {% else %}📖 Today's Focus
+                {% endif %}
+            </h2>
+            <span class="day-badge">{{ current.day_key|replace('_', ' ')|title }}</span>
+        </div>
+
+        <h3 class="topic-title">{{ current.topic }}</h3>
+
+        {% if current.quiz_score is none %}
+            <p class="topic-description">Ready to learn? Take the quiz when you're prepared!</p>
+            <a href="{{ url_for('quiz') }}" class="btn btn-primary btn-lg">Take Quiz</a>
+        {% else %}
+            <div class="completed-badge">
+                <span class="checkmark">✓</span>
+                <span>Completed (Score: {{ (current.quiz_score * 100)|int }}%)</span>
+            </div>
+            <p class="topic-description">Great job! Check back tomorrow for your next topic.</p>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Quick Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">{{ progress.completed_quizzes }}</div>
+            <div class="stat-label">Quizzes Completed</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-value">{{ progress.unique_topics_covered }}</div>
+            <div class="stat-label">Topics Covered</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-value">{{ (progress.average_score * 100)|int }}%</div>
+            <div class="stat-label">Average Score</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-value">{{ progress.total_days }}</div>
+            <div class="stat-label">Learning Days</div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="actions-row">
+        <a href="{{ url_for('progress') }}" class="btn btn-secondary">View Full Progress</a>
+        <a href="{{ url_for('settings') }}" class="btn btn-secondary">Settings</a>
+    </div>
+</div>
+{% endblock %}
