@@ -101,7 +101,7 @@ def show_daily_journey():
     # Create user if doesn't exist
     if not data_manager.user_exists(username):
         scheduler = AdaptiveScheduler()
-        scheduler.initialize_schedule(username, "python", "playful", "2025-02-01")
+        scheduler.initialize_schedule(username, "python", "2025-02-01")
 
     service = NotificationService()
     engine = service.message_engine
