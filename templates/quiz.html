@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz - {{ current.topic }}{% endblock %}
+{% block body_class %}quiz-page tone-{{ user.tone_mode }}{% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <div class="quiz-header">
+        <h1>📝 Quiz Time!</h1>
+        <p class="topic-name">Topic: {{ current.topic }}</p>
+        <span class="quiz-badge">{{ current.day_key|replace('_', ' ')|title }}</span>
+    </div>
+
+    <div class="quiz-instructions">
+        <h3>How well did you understand this topic?</h3>
+        <p>Rate your understanding honestly - our AI will adapt your schedule based on your response.</p>
+    </div>
+
+    <form method="POST" class="quiz-form">
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="score" value="0.2" required>
+                <div class="option-card">
+                    <span class="option-emoji">😵</span>
+                    <span class="option-label">Struggled (20%)</span>
+                    <span class="option-desc">Didn't understand much</span>
+                </div>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="score" value="0.5">
+                <div class="option-card">
+                    <span class="option-emoji">🤔</span>
+                    <span class="option-label">Some Confusion (50%)</span>
+                    <span class="option-desc">Got the basics, need practice</span>
+                </div>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="score" value="0.7">
+                <div class="option-card">
+                    <span class="option-emoji">😊</span>
+                    <span class="option-label">Good (70%)</span>
+                    <span class="option-desc">Understood most concepts</span>
+                </div>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="score" value="0.85">
+                <div class="option-card">
+                    <span class="option-emoji">😄</span>
+                    <span class="option-label">Very Good (85%)</span>
+                    <span class="option-desc">Solid understanding</span>
+                </div>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="score" value="0.95">
+                <div class="option-card">
+                    <span class="option-emoji">🚀</span>
+                    <span class="option-label">Excellent (95%)</span>
+                    <span class="option-desc">Mastered it!</span>
+                </div>
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Quiz</button>
+    </form>
+
+    <div class="quiz-footer">
+        <p>💡 Tip: Be honest! The AI adapts better when you're truthful about your understanding.</p>
+    </div>
+</div>
+{% endblock %}

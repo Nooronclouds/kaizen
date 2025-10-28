@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz Results{% endblock %}
+{% block body_class %}result-page tone-{{ user.tone_mode }}{% endblock %}
+
+{% block content %}
+<div class="result-container">
+    <div class="result-header">
+        <h1>
+            {% if result.action == 'accelerate' %}🚀
+            {% elif result.action == 'proceed' %}✅
+            {% else %}🔄
+            {% endif %}
+            Quiz Complete!
+        </h1>
+    </div>
+
+    <div class="result-card">
+        <div class="result-action">
+            <h2>
+                {% if result.action == 'accelerate' %}Accelerating! 🚀
+                {% elif result.action == 'proceed' %}Moving Forward ✅
+                {% else %}Let's Review 🔄
+                {% endif %}
+            </h2>
+            <p class="action-description">{{ action_message }}</p>
+        </div>
+
+        <div class="result-details">
+            <h3>What's Next?</h3>
+            <div class="next-topic-card">
+                <span class="next-badge">
+                    {% if result.next_type == 'new_topic' %}📚 New Topic
+                    {% else %}🔄 Review
+                    {% endif %}
+                </span>
+                <h4>{{ result.next_topic }}</h4>
+            </div>
+        </div>
+
+        <div class="ml-confidence">
+            <h3>ML Decision Confidence</h3>
+            <div class="confidence-bars">
+                {% for action, prob in result.probabilities.items() %}
+                    <div class="confidence-item">
+                        <span class="conf-label">{{ action|replace('_', ' ')|title }}</span>
+                        <div class="conf-bar-container">
+                            <div class="conf-bar" style="width: {{ (prob * 100)|int }}%"></div>
+                        </div>
+                        <span class="conf-value">{{ (prob * 100)|int }}%</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="result-actions">
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">Back to Dashboard</a>
+        <a href="{{ url_for('progress') }}" class="btn btn-secondary">View Progress</a>
+    </div>
+</div>
+{% endblock %}
