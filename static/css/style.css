@@ -541,6 +541,87 @@ body.tone-genz .topic-card {
     justify-content: center;
 }
 
+/* Streak Card */
+.streak-card {
+    background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+    color: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.streak-main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.streak-icon {
+    font-size: 4rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.streak-content {
+    flex: 1;
+}
+
+.streak-value {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.streak-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-left: 0.5rem;
+}
+
+.streak-status {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.streak-status.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.streak-status.inactive {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.streak-stats {
+    display: flex;
+    gap: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.streak-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.streak-stat .stat-icon {
+    font-size: 1.5rem;
+}
+
 /* ============================================================================
    Quiz
    ============================================================================ */
