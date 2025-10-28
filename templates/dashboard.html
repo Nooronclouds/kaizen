@@ -54,6 +54,36 @@
     </div>
     {% endif %}
 
+    <!-- Streak Card -->
+    <div class="streak-card">
+        <div class="streak-main">
+            <div class="streak-icon">🔥</div>
+            <div class="streak-content">
+                <div class="streak-value">
+                    {{ streak.current_streak }}
+                    <span class="streak-label">Day Streak</span>
+                </div>
+                {% if streak.streak_active %}
+                    <div class="streak-status active">Active 🔥</div>
+                {% else %}
+                    <div class="streak-status inactive">Start a new streak!</div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="streak-stats">
+            <div class="streak-stat">
+                <span class="stat-icon">👑</span>
+                <span class="stat-text">Longest: {{ streak.longest_streak }} days</span>
+            </div>
+            {% if streak.next_milestone %}
+            <div class="streak-stat">
+                <span class="stat-icon">🎯</span>
+                <span class="stat-text">Next goal: {{ streak.next_milestone }} days</span>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
     <!-- Quick Stats -->
     <div class="stats-grid">
         <div class="stat-card">
