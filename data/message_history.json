@@ -79,5 +79,61 @@
       "STOP IT RIGHT NOW you literally just- \ud83d\ude2d\ud83d\udc80\ud83c\udf89",
       "And THAT'S on learning and periodt! \ud83d\udcaf\ud83d\udd25"
     ]
+  },
+  "demo_playful": {
+    "playful_new_topic": [
+      "Time to unlock {topic}! This is gonna be fun! \ud83c\udfae"
+    ],
+    "playful_review_topic": [
+      "Round 2 with {topic}! Time to show it who's boss! \ud83e\udd4a"
+    ],
+    "playful_completion_milestone": [
+      "Level complete! You're officially awesome! \ud83c\udfc6"
+    ],
+    "playful_rest_day": [
+      "Taking a break = secret to success. Enjoy! \ud83d\ude34"
+    ]
+  },
+  "demo_motivating": {
+    "motivating_new_topic": [
+      "Channel your inner champion. {topic} doesn't stand a chance! \ud83c\udfc6"
+    ],
+    "motivating_review_topic": [
+      "Dedication pays off! Let's perfect {topic} today! \ud83c\udfaf"
+    ],
+    "motivating_completion_milestone": [
+      "What an achievement! You earned every bit of this! \u2b50"
+    ],
+    "motivating_rest_day": [
+      "Rest is training! Your mind is getting stronger! \ud83d\udcaa"
+    ]
+  },
+  "demo_soft": {
+    "soft_new_topic": [
+      "Hello! Ready to discover {topic}? Go at your own speed \ud83c\udf3b"
+    ],
+    "soft_review_topic": [
+      "It's okay to review! {topic} will make more sense now \ud83c\udf38"
+    ],
+    "soft_completion_milestone": [
+      "You reached this milestone through persistence and care \ud83e\udd8b"
+    ],
+    "soft_rest_day": [
+      "Rest day. Your mind and body will thank you \ud83c\udf19"
+    ]
+  },
+  "demo_genz": {
+    "genz_new_topic": [
+      "New {topic} content just unlocked. It's giving genius \ud83e\udde0"
+    ],
+    "genz_review_topic": [
+      "{topic} comeback tour. This is the one fr fr \ud83d\udd25"
+    ],
+    "genz_completion_milestone": [
+      "This is giving winner energy and I'm here for it! \ud83c\udf8a"
+    ],
+    "genz_rest_day": [
+      "Day off vibes. Touch grass, bestie \ud83c\udf31\u2728"
+    ]
   }
 }
